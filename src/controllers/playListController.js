@@ -25,4 +25,3 @@ export default async function getPlaylist(req, res) {
   }
 };
 
-module.exports = { getPlaylist };
