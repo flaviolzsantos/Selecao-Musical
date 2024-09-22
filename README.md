@@ -42,6 +42,8 @@ Crie um arquivo .env baseado no exemplo e adicione suas chaves de API:
 ```bash
   WEATHER_URL=https://api.hgbrasil.com/weather
   WEATHER_API_KEY=70866c48
+  CACHE_VALUE_MILISECOUNDS=60000
+  CACHE_IS_ON=true
 ```
 
 4. Rodando a Aplicação
