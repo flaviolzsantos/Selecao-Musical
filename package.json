@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start" : "node src/server.js",
-    "test": "mocha 'tests/**/*.js'"
+    "dev": "node --watch src/server.js",
+    "test": "mocha 'tests/**/*.js'",
+    "build" : "docker build -t music-temperature-api .",
+    "dockerRun" : "docker run -p 3000:3000 --env-file .env music-temperature-api"
   },  
   "dependencies": {
     "axios": "^1.7.7",

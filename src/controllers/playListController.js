@@ -1,5 +1,5 @@
 
-import getPlaylistByTemperature from '../services/playlistService.js';
+import getPlaylistByTemperature from '../services/playListService.js';
 import getWeatherData from '../config/weatherApi.js';
 
 export default async function getPlaylist(req, res) {
