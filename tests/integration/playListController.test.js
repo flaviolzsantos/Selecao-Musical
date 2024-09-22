@@ -2,11 +2,11 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import request from 'supertest';
 import app from '../../src/app.js';
 
-import * as weatherApi from '../../src/config/weatherApi.js';
+import * as weatherApi from '../../src/httpRequest/weatherApi.js';
 import * as playlistService from '../../src/services/playListService.js';
 
 
-vi.mock('../../src/config/weatherApi.js');
+vi.mock('../../src/httpRequest/weatherApi.js');
 vi.mock('../../src/services/playListService.js');
 
 describe('Playlist Controller - /playlist', () => {
