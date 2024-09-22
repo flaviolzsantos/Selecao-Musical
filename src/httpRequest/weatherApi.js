@@ -9,7 +9,6 @@ export default async function getWeatherData(city){
   
   const {WEATHER_URL, WEATHER_API_KEY} = process.env;
   const cacheKey = `weather-${city}`;
-  console.log(cache.isCacheOn)
 
   if(cache.isCacheOn){
     const cachedData = cache.get(cacheKey);
