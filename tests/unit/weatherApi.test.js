@@ -10,15 +10,17 @@ describe('getWeatherData', () => {
 
   beforeEach(() => {
     vi.resetAllMocks();
-    process.env = { ...env, WEATHER_URL: 'https://teste.com', WEATHER_API_KEY: 'key' }; 
+    process.env = { ...env, WEATHER_URL: 'https://teste.com', WEATHER_API_KEY: 'key'}; 
   });
 
   afterEach(() => {
     process.env = env; // Restaura as variáveis de ambiente originais após os testes
   });
 
-  it('deve retornar os dados do clima para uma cidade válida', async () => {
+  it('deve retornar os dados do clima para uma cidade válida sem cache', async () => {
     
+    process.env.CACHE_IS_ON = false;
+
     const mockedResponse = {
       data: {
         temp: 27,
@@ -35,7 +37,30 @@ describe('getWeatherData', () => {
       'https://teste.com?fields=only_results,temp,city_name&key=key&city_name=São Paulo'
     );
 
-    expect(result).toEqual(mockedResponse);
+    expect(result).toEqual(mockedResponse.data);
+  });
+
+  it('deve retornar os dados do clima para uma cidade válida com cache', async () => {
+    
+    process.env.CACHE_IS_ON = true;
+
+    const mockedResponse = {
+      data: {
+        temp: 27,
+        city_name: 'São Paulo'
+      }
+    };
+
+    axios.get.mockResolvedValue(mockedResponse);
+
+    const result = await getWeatherData('São Paulo');
+
+    
+    expect(axios.get).toHaveBeenCalledWith(
+      'https://teste.com?fields=only_results,temp,city_name&key=key&city_name=São Paulo'
+    );
+
+    expect(result).toEqual(mockedResponse.data);
   });
 
   it('deve lançar um erro quando a cidade não for encontrada', async () => {

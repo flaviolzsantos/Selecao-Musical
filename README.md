@@ -9,7 +9,8 @@ Este projeto é uma API que utiliza dados de clima para sugerir playlists basead
 - Axios: Usado para realizar chamadas HTTP para a API de clima.
 - Vitest: Framework de testes utilizado para testes unitários e de integração.
 - Docker: Utilizado para containerizar a aplicação e garantir a portabilidade.
-- dotenv: Carrega variáveis de ambiente a partir de um arquivo .env
+- dotenv: Carrega variáveis de ambiente a partir de um arquivo .env.
+- Cache em memória com TTL (Time to Live) parametrizado em variável de ambiente em milesegundos. Implementado feature toggle para ligar e desligar o cache se necessário.
 
 ## Requisitos
 
