@@ -1,6 +1,7 @@
 
 export default function getPlaylistByTemperature(temperature){
 
+  
     if (temperature > 25) {
       return ['Musica Pop 1', 'Musica Pop 2', 'Musica Pop 3'];
     } else if (temperature >= 10 && temperature <= 25) {

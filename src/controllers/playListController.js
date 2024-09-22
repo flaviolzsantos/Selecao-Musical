@@ -10,6 +10,7 @@ export default async function getPlaylist(req, res) {
   }
 
   try {
+        
     const {temp, city_name} = await getWeatherData(city);
     const playlist = getPlaylistByTemperature(temp);
 
