@@ -1,5 +1,5 @@
 
-# CompanyHero Project
+# Selecao-Musical Project
 
 Este projeto é uma API que utiliza dados de clima para sugerir playlists baseadas na temperatura da cidade informada.
 
@@ -24,7 +24,7 @@ Este projeto é uma API que utiliza dados de clima para sugerir playlists basead
 1. Clonar o Repositório
 
 ```bash
-  git clone https://github.com/flaviolzsantos/CompanyHero.git
+  git clone https://github.com/flaviolzsantos/Selecao-Musical.git
   cd CompanyHero
 ```
 
@@ -41,7 +41,7 @@ Crie um arquivo .env baseado no exemplo e adicione suas chaves de API:
 
 ```bash
   WEATHER_URL=https://api.hgbrasil.com/weather
-  WEATHER_API_KEY=70866c48
+  WEATHER_API_KEY=
   CACHE_VALUE_MILISECOUNDS=60000
   CACHE_IS_ON=true
 ```
