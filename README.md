@@ -25,7 +25,7 @@ Este projeto é uma API que utiliza dados de clima para sugerir playlists basead
 
 ```bash
   git clone https://github.com/flaviolzsantos/Selecao-Musical.git
-  cd CompanyHero
+  cd Selecao-Musical
 ```
 
 2. Instalar Dependências
